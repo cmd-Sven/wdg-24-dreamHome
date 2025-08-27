@@ -7,10 +7,11 @@
   </head>
   <body class="bg-gray-100">
     <div class="bg-gray-100 border-2 border-red-600">
-      <header>
+      <header class="sticky top-0 z-50 bg-white shadow-md">
         <div
           class="max-w-[1400px] mx-auto flex justify-between items-center px-4 py-4 gap-6"
         >
+          >
           <!-- Bereich 1: Logo -->
           <div class="flex items-center">
             <a href="/" class="text-2xl font-bold text-gray-800"> MyLogo </a>
@@ -96,13 +97,79 @@
 
           <!-- Rechte Spalte (2/3) -->
           <div class="col-span-2">
-            <img
+            <imgw
               src="https://via.placeholder.com/900x600"
               alt="Haus Bild"
               class="w-full rounded-xl shadow-lg object-cover"
             />
           </div>
         </section>
+        <!--Begin Formular Suche-->
+        <div class="max-w-5xl mx-auto bg-white p-6 rounded-2xl shadow-lg">
+          <form class="flex flex-wrap items-center gap-6">
+            <!-- Location -->
+            <div class="flex items-center gap-2">
+              <label for="location" class="text-sm font-medium text-gray-700">
+                Location
+              </label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter location..."
+                class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <!-- Type -->
+            <div class="flex items-center gap-2">
+              <label for="type" class="text-sm font-medium text-gray-700">
+                Type
+              </label>
+              <select
+                id="type"
+                name="type"
+                class="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="">Select type...</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="condo">Condo</option>
+              </select>
+            </div>
+
+            <!-- Price -->
+            <div class="flex items-center gap-2 flex-1">
+              <label
+                for="price"
+                class="text-sm font-medium text-gray-700 whitespace-nowrap"
+              >
+                Price
+              </label>
+              <input
+                type="range"
+                id="price"
+                name="price"
+                min="0"
+                max="12000"
+                step="100"
+                class="w-full accent-blue-600"
+                oninput="document.getElementById('priceValue').innerText = this.value"
+              />
+              <span id="priceValue" class="text-sm text-gray-600">0</span> €
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+
+        <!-- END Formular Suche-->
 
         <!--- zweite Sektion - Fakten -->
         <section class="bg-purple-400 p-6 rounded-xl shadow mb-6">
