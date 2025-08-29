@@ -10,6 +10,11 @@
   --color-IconsSchriftSignUpFeld: #695346;
   --color-IconsObereLeiste: #2b1b12;
 }
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Globale Schriften */
 @font-face {
   font-family: "Montserrat";
@@ -22,7 +27,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
-  font-weight: 800;
+  font-weight: 800; /* ExtraBold */
   font-style: normal;
 }
 
@@ -31,29 +36,41 @@
   font-family: "Montserrat";
   src: url("../fonts/Montserrat-Italic.woff2") format("woff2");
   font-weight: 400;
-  font-style: italic;
 }
-:root {
-  --font-montserrat-bold: "Montserrat", sans-serif;
-  --font-montserrat-extrabold: "Montserrat", sans-serif;
-  --font-montserrat-italic: "Montserrat", sans-serif;
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Umgang Variabeln mit Tailwind sind hier zu sehen: https://tailwindcss.com/docs/theme */
 
 /* Hero Image*/
 .ken-burns {
-  /* Startposition: leicht unten rechts */
-  transform: scale(1) translate(10%, 10%);
+  transform: scale(0.8) translate(10%, 10%);
   transform-origin: center;
-  animation: kenBurns 20s ease-in-out infinite alternate;
+  animation: kenBurns 15s ease-in-out forwards;
 }
 
 @keyframes kenBurns {
   0% {
-    transform: scale(1) translate(10%, 10%);
+    transform: scale(0.8) translate(10%, 5%);
   }
   100% {
-    transform: scale(1.1) translate(0%, 0%);
+    transform: scale(1) translate(0%, 0%);
   }
+}
+/* Formanimation brauner Balken */
+@keyframes formAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.form-appear {
+  animation: formAppear 1s ease-out forwards;
 }
