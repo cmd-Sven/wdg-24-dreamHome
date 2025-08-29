@@ -17,3 +17,20 @@
 }
 
 /* Umgang Variabeln mit Tailwind sind hier zu sehen: https://tailwindcss.com/docs/theme */
+
+/* Hero Image*/
+.ken-burns {
+  /* Startposition: leicht unten rechts */
+  transform: scale(1) translate(10%, 10%);
+  transform-origin: center;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translate(10%, 10%);
+  }
+  100% {
+    transform: scale(1.1) translate(0%, 0%);
+  }
+}
