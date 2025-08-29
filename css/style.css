@@ -12,5 +12,9 @@
 }
 
 /* Globale Schriften */
+@theme {
+  --font-Hauptschrift: "Open Sans", sans-serif;
+  --font-Ueberschriften: "Roboto", sans-serif;
+}
 
 /* Umgang Variabeln mit Tailwind sind hier zu sehen: https://tailwindcss.com/docs/theme */
