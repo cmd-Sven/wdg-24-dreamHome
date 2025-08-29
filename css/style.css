@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Globale Farben */
-@theme {
+:root {
   --color-Hauptlogo: #2a1b12;
   --color-Ueberschriften: #2b1b12;
   --color-Fließtext: #4f3527;
@@ -9,10 +9,9 @@
   --color-Backround: #fef7f2;
   --color-IconsSchriftSignUpFeld: #695346;
   --color-IconsObereLeiste: #2b1b12;
-}
 
-/* Globale Schriften */
-@theme {
+  /* Globale Schriften */
+
   --font-Hauptschrift: "Open Sans", sans-serif;
   --font-Ueberschriften: "Roboto", sans-serif;
 }
