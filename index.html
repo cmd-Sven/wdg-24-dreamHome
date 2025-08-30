@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script/script.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
@@ -232,14 +233,60 @@
           <!-- END Formular Suche-->
         </section>
         <!--- zweite Sektion - Fakten -->
-        <section
-          class="bg-purple-400 rounded-xl shadow mt-[70px] p-10"
-        >
-          <div class="max-w-[1400px] mx-auto px-4">
-            <h2>Another Section</h2>
-            <p>This section provides additional information.</p>
+<section class="mt-[140px] p-10">
+  <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 items-center px-4">
+    
+    <!-- Spalte 1: Bild -->
+    <div class="fade-in-left">
+      <img class="w-auto"
+        src="images/Bilder-Häuser/Haus links.png" 
+        alt="Sample" 
+        class="w-full h-auto rounded-2xl shadow-lg"
+      />
+    </div>
+
+    <!-- Spalte 2: Text -->
+    <div>
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        We Help You To Find Your Dreamhome
+      </h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-10">
+        This section provides additional information. 
+        You can add more descriptive text here to explain details, 
+        highlight features, or guide the user through the content.
+      </p>
+
+      <!-- Counter Reihe -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+        
+        <!-- Counter 1 -->
+        <div>
+          <div class="counter">
+            <span id="counter1">0</span>k+
           </div>
-        </section>
+          <p class="text-gray-700 mt-2">Houses Available</p>
+        </div>
+
+        <!-- Counter 2 -->
+        <div>
+          <div class="counter">
+            <span id="counter2">0</span>k+
+          </div>
+          <p class="text-gray-700 mt-2">Houses Sold</p>
+        </div>
+
+        <!-- Counter 3 -->
+        <div>
+          <div class="counter">
+            <span id="counter3">0</span>k+
+          </div>
+          <p class="text-gray-700 mt-2">Trusted Agent</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
         <!--- dritte Sektion - Choose us  -->
         <section class="bg-blue-50 p-6 rounded-xl shadow mb-6 z-30">

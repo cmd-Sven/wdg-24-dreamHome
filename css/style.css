@@ -71,6 +71,14 @@
   }
 }
 
+/* Counter Formatierung in Sektion 2 */
+
+.counter {
+  font-size: 48px;
+  font-weight: 800; /* entspricht Tailwind font-extrabold */
+  line-height: 1;
+}
+
 .form-appear {
   animation: formAppear 1s ease-out forwards;
 }
