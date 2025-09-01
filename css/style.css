@@ -73,12 +73,69 @@
 
 /* Counter Formatierung in Sektion 2 */
 
+/* Counter Styling */
 .counter {
-  font-size: 48px;
-  font-weight: 800; /* entspricht Tailwind font-extrabold */
-  line-height: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+/* Puls-Animation */
+.pulse {
+  animation: pulse 0.6s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Feuerwerk-Partikel */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: explode 700ms forwards;
+}
+
+@keyframes explode {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--x), var(--y)) scale(0.2);
+    opacity: 0;
+  }
 }
 
 .form-appear {
   animation: formAppear 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* optional: leichtes Hochrutschen */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Klasse für Fade-In */
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
 }
