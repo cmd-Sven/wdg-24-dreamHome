@@ -1,3 +1,5 @@
+// ################## Counter  inklusive Animation Pixelfeuerwerk ################# //
+
 function animateCounter(id, target, duration) {
   const element = document.getElementById(id);
   let start = 0;
@@ -72,4 +74,20 @@ window.addEventListener("DOMContentLoaded", () => {
   if (counterSection) {
     observer.observe(counterSection);
   }
+});
+
+// ############### Tooltip bei Suchformular ####################### //
+const tooltip = document.getElementById("tooltip");
+const closeBtn = document.getElementById("closeTooltip");
+
+// Tooltip nach 2 Sekunden einblenden
+setTimeout(() => {
+  tooltip.classList.add("opacity-100", "pointer-events-auto");
+  tooltip.classList.remove("opacity-0", "pointer-events-none");
+}, 2000);
+
+// Schließen per Button
+closeBtn.addEventListener("click", () => {
+  tooltip.classList.remove("opacity-100", "pointer-events-auto");
+  tooltip.classList.add("opacity-0", "pointer-events-none");
 });

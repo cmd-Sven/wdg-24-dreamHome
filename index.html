@@ -123,12 +123,12 @@
           <!-- Linke Spalte (1/3) -->
           <div class="col-span-1 space-y-6">
             <h1
-              class="absolute font-montserrat text-[74px] font-extrabold text-gray-900 leading-tight"
-            >
+              class=" fade-in-left absolute font-montserrat text-[74px] font-extrabold text-gray-900 leading-tight"
+            > 
               Find Your <br />
               Dream Home
             </h1>
-            <p class=" text-gray-900 mt-50 font-montserrat font-extrabold text-[22px]">
+            <p class=" fade-in-left text-gray-900 mt-50 font-montserrat font-extrabold text-[22px]">
               Explore our curated selection of exquisite properties meticulously
               "tailoed" to your unique dream home vision</p>
               <button
@@ -161,11 +161,21 @@
               class="w-full h-full max-w-[1000px] object-contain"
             />
           </div>
-
+  <div id="tooltip"
+    class="-top-28 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-4 rounded-xl shadow-lg
+           opacity-0 pointer-events-none transition-opacity duration-500 max-w-md text-center z-20">
+    <button id="closeTooltip" class="absolute top-2 right-3 text-white text-lg font-bold">&times;</button>
+    Nutze Sie unsere <b>Top Suchfunktion</b>, um Ihr passendes Haus zu finden!
+  </div>
           <!-- #################  Begin Formular Suche ################## -->
           <div class="fade-in absolute top-1/2 left-1/2 w-[90%] max-w-5xl -translate-x-1/2 -translate-y-1/2 
             bg-[#DDC7BB] p-6 rounded-2xl shadow-lg z-10 mt-[370px]">
-            <form class="flex flex-col md:flex-row flex-wrap items-center gap-6 ">
+
+              <!-- Tooltip Box -->
+
+  
+  <form class="flex flex-col md:flex-row flex-wrap items-center gap-6 ">
+              
     
     <!-- Location -->
     <div class="relative flex-1 w-full">
