@@ -92,3 +92,14 @@ closeBtn.addEventListener("click", () => {
   tooltip.classList.remove("opacity-100", "pointer-events-auto");
   tooltip.classList.add("opacity-0", "pointer-events-none");
 });
+
+// Newsletter Message
+
+const form = document.getElementById("newsletterForm");
+const thankYou = document.getElementById("thankYouMessage");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // Verhindert Reload
+  form.classList.add("hidden"); // Formular ausblenden
+  thankYou.classList.remove("hidden"); // Danke-Text einblenden
+});
