@@ -77,6 +77,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // ############### Tooltip bei Suchformular ####################### //
+
 const tooltip = document.getElementById("tooltip");
 const closeBtn = document.getElementById("closeTooltip");
 
