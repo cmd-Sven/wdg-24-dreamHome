@@ -135,7 +135,38 @@
   }
 }
 
-/* Klasse für Fade-In */
+/* ################# Fade in Animations Varianten ######################## */
+/*  Fade-In */
 .fade-in {
   animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Fade-In von links */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-left {
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+/* Fade-In von rechts */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-right {
+  animation: fadeInRight 1s ease-in-out forwards;
 }
