@@ -75,31 +75,3 @@ window.addEventListener("DOMContentLoaded", () => {
     observer.observe(counterSection);
   }
 });
-
-// ############### Tooltip bei Suchformular ####################### //
-
-const tooltip = document.getElementById("tooltip");
-const closeBtn = document.getElementById("closeTooltip");
-
-// Tooltip nach 2 Sekunden einblenden
-setTimeout(() => {
-  tooltip.classList.add("opacity-100", "pointer-events-auto");
-  tooltip.classList.remove("opacity-0", "pointer-events-none");
-}, 2000);
-
-// Schließen per Button
-closeBtn.addEventListener("click", () => {
-  tooltip.classList.remove("opacity-100", "pointer-events-auto");
-  tooltip.classList.add("opacity-0", "pointer-events-none");
-});
-
-// Newsletter Message
-
-const form = document.getElementById("newsletterForm");
-const thankYou = document.getElementById("thankYouMessage");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // Verhindert Reload
-  form.classList.add("hidden"); // Formular ausblenden
-  thankYou.classList.remove("hidden"); // Danke-Text einblenden
-});
