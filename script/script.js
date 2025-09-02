@@ -75,3 +75,38 @@ window.addEventListener("DOMContentLoaded", () => {
     observer.observe(counterSection);
   }
 });
+
+// Yeah Canvas!
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emojis = ["🏡", "🏗️", "🔨", "🏠"]; // Reihenfolge der Animation
+  let index = 0;
+
+  setInterval(() => {
+    // Canvas erzeugen
+    const canvas = document.createElement("canvas");
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext("2d");
+
+    // Hintergrund durchsichtig lassen
+    ctx.clearRect(0, 0, 64, 64);
+
+    // Emoji ins Canvas zeichnen
+    ctx.font = "48px serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(emojis[index], 32, 32);
+
+    // Neues Favicon setzen
+    const link =
+      document.querySelector("link[rel='icon']") ||
+      document.createElement("link");
+    link.rel = "icon";
+    link.href = canvas.toDataURL("image/png");
+    document.head.appendChild(link);
+
+    // Index wechseln
+    index = (index + 1) % emojis.length;
+  }, 800); // alle 0,8 Sekunden wechseln
+});
