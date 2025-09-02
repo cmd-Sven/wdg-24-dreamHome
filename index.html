@@ -340,12 +340,53 @@
         </section>
 
         <!--- Sechste Sektion - Help -->
-        <section class="bg-blue-50 p-6 rounded-xl shadow mb-6">
-          <div class="max-w-[1400px] mx-auto px-4">
-            <h2>Extra Section</h2>
-            <p>This section offers extra details.</p>
-          </div>
-        </section>
+<section class=" p-20 rounded-xl shadow ">
+  <div class="max-w-[1400px] mx-auto px-4 text-center">
+
+    <!-- Überschrift -->
+    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+      Do You Have Any Questions? <br> Get Help From Us
+    </h2>
+
+    <!-- Checkliste -->
+    <div class="flex flex-row gap-12 mb-8 items-center justify-center">
+      <div class="flex items-center gap-2 text-gray-700">
+        <img src="images/Icons/verified.svg">
+        <span class="font-bold">Chat Live with our Support Team</span>
+      </div>
+      <div class="flex items-center gap-2 text-gray-700">
+        <img src="images/Icons/verified.svg">
+        </svg>
+        <span class="font-bold">Browse our FAQ</span>
+      </div>
+    </div>
+
+    <!-- Newsletter-Formular -->
+    <form id="newsletterForm" class="flex flex-col md:flex-row items-center justify-center gap-3">
+      <div class="relative w-full md:w-80">
+        <!-- E-Mail Icon -->
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+          <img src="images/Icons/Enter your Email.svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m8 0l-8 8m8-8l-8-8" />
+          </svg>
+        </span>
+        <input type="email" required placeholder="Ihre Email..."
+          class="pl-10 pr-4 py-2 rounded-lg  focus:outline-none focus:ring-2  bg-amber-700 focus:ring-gray-500 w-full" />
+      </div>
+      <button type="submit"
+        class="px-5 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition w-full md:w-auto">
+        Submit
+      </button>
+    </form>
+
+    <!-- Danke-Message -->
+    <p id="thankYouMessage" class="hidden text-green-700 font-medium mt-6">
+      Vielen Dank für Deine Anmeldung.
+    </p>
+
+  </div>
+</section>
+
       </main>
 
       <!-- ###################### End MAIN ################-->
