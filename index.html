@@ -779,8 +779,8 @@
       Jetzt direkt unseren Agenten sprechen
     </div>
     
-    <!-- Avatar -->
-    <img src="images/Bilder Menschen/Frau Brünett.png" alt="Agent Avatar"
+  <!-- Avatar -->
+    <img src="images/Bilder Menschen/Frau Blond.png" alt="Agent Avatar"
          class="w-14 h-14 rounded-full shadow-lg border-2 border-white cursor-pointer">
   </div>
 
@@ -798,5 +798,47 @@
     <button id="close-popup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 font-bold">&times;</button>
   </div>
 </div>
+
+  <!-- Chat-Container -->
+  <div id="chat-container"
+       class="fixed bottom-6 right-6 flex items-center space-x-3 opacity-0 transition-opacity duration-700">
+    
+    <!-- Avatar (klickbar) -->
+    <button id="chat-avatar"
+            class="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg focus:outline-none">
+      
+      <img src="images/Bilder Menschen/Frau Blond.png">
+    </button>
+
+    <!-- Text-Bubble -->
+    <div class="chat-bubble relative bg-white shadow-xl rounded-2xl p-4 max-w-xs">
+      <p class="text-gray-800 text-sm">
+        Nehme jetzt Kontakt mit unserem Agent auf und lass dich direkt beraten
+      </p>
+    </div>
+  </div>
+
+  <!-- Popup Overlay -->
+  <div id="popup-overlay" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+    <!-- Popup Box -->
+    <div class="bg-white w-[300px] h-[280px] rounded-xl shadow-lg relative p-6 flex flex-col justify-between">
+      
+      <!-- Close Icon -->
+      <button id="popup-close" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-xl">&times;</button>
+
+      <!-- Inhalt -->
+      <div class="flex flex-col items-center justify-center flex-grow space-y-4">
+        <h2 class="text-lg font-semibold text-center text-gray-800">
+          Verbindung zu deinem Agenten wird aufgebaut
+        </h2>
+
+        <!-- Ladebalken -->
+        <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+          <div id="progress-bar" class="bg-blue-500 h-3 w-0 transition-all duration-700"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>

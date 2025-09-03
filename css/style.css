@@ -203,3 +203,16 @@
 .pulse-slow {
   animation: pulse-slow 2s ease-in-out infinite;
 }
+
+/* ############# Chat Bot ######################*/
+/* Pfeil an der Sprechblase */
+.chat-bubble::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
