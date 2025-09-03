@@ -112,83 +112,30 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Chat Bubble ein und ausblenden.
+document.addEventListener("DOMContentLoaded", () => {
+  const chatContainer = document.getElementById("chat-container");
+  const chatAvatar = document.getElementById("chat-avatar");
+  const popupOverlay = document.getElementById("popup-overlay");
+  const popupClose = document.getElementById("popup-close");
+  const progressBar = document.getElementById("progress-bar");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const agent = document.getElementById("chat-agent");
-  const bubble = document.getElementById("chat-bubble");
-
-  // 1. Nach 5 Sekunden einblenden
+  // Nach 4 Sekunden Chat einblenden
   setTimeout(() => {
-    agent.classList.remove("opacity-0");
-  }, 5000);
+    chatContainer.classList.remove("opacity-0");
+    chatContainer.classList.add("opacity-100");
+  }, 4000);
 
-  // 2. Sprechblase nach 5 weiteren Sekunden ausblenden
-  setTimeout(() => {
-    if (bubble) bubble.classList.add("hidden");
-  }, 10000); // 5s + 5s = 10s insgesamt
-});
+  // Avatar Klick -> Popup öffnen
+  chatAvatar.addEventListener("click", () => {
+    popupOverlay.classList.remove("hidden");
 
-// PopUp Chatfenster mit Loading
+    // Ladebalken füllen
+    progressBar.style.width = "100%";
+  });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const agent = document.getElementById("chat-agent");
-  const bubble = document.getElementById("chat-bubble");
-  const popup = document.getElementById("chat-popup");
-  const closeBtn = document.getElementById("close-popup");
-  const loadingBar = document.getElementById("loading-bar");
-
-  // Avatar + Sprechblase nach 5 Sekunden einblenden
-  setTimeout(() => agent.classList.remove("opacity-0"), 5000);
-
-  // Sprechblase nach weiteren 5 Sekunden ausblenden
-  // setTimeout(() => bubble.classList.add("hidden"), 10000);
-
-  // Beim Anklicken der Sprechblase oder Avatar Pop-Up öffnen
-  bubble.addEventListener("click", openPopup);
-  agent.querySelector("img").addEventListener("click", openPopup);
-
-  function openPopup() {
-    popup.classList.remove("hidden");
-    loadingBar.style.width = "0"; // Reset
-
-    // Ladebalken animieren
-    setTimeout(() => {
-      loadingBar.style.width = "100%";
-    }, 100); // kleine Verzögerung für Transition
-  }
-  // Schließen Button
-  closeBtn.addEventListener("click", () => popup.classList.add("hidden"));
-});
-
-// Angebots Stern über Card 2
-
-document.addEventListener("DOMContentLoaded", function () {
-  const star = document.getElementById("top-star");
-  const card2 = document.getElementById("card-middle");
-  const innerStar = star.querySelector("div");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            star.classList.remove("hidden");
-
-            // Nach Intro-Animation die Pulsation starten
-            innerStar.addEventListener(
-              "animationend",
-              () => {
-                innerStar.classList.remove("intro-zoom");
-                innerStar.classList.add("pulse-slow");
-              },
-              { once: true }
-            );
-          }, 1000); // 1 Sekunde Verzögerung nach Scroll
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  observer.observe(card2);
+  // Popup schließen
+  popupClose.addEventListener("click", () => {
+    popupOverlay.classList.add("hidden");
+    progressBar.style.width = "0"; // zurücksetzen für nächsten Klick
+  });
 });
