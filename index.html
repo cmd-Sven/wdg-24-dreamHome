@@ -890,6 +890,28 @@
       </div>
     </div>
   </div>
+<script>
+  document.querySelectorAll(".faq-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector("svg");
+
+      // wenn offen → schließen
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.classList.remove("rotate-180");
+      } else {
+        // alle anderen schließen
+        document.querySelectorAll(".faq-content").forEach((el) => el.style.maxHeight = null);
+        document.querySelectorAll(".faq-toggle svg").forEach((el) => el.classList.remove("rotate-180"));
+
+        // aktuelles öffnen
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.classList.add("rotate-180");
+      }
+    });
+  });
+</script>
 
   </body>
 </html>
