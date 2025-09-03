@@ -170,3 +170,36 @@
 .fade-in-right {
   animation: fadeInRight 1s ease-in-out forwards;
 }
+
+/* pulsierendes Angebot */
+
+@keyframes intro-zoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Langsame Pulsation */
+@keyframes pulse-slow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.intro-zoom {
+  animation: intro-zoom 0.8s ease-out forwards;
+}
+
+/* Klasse für die Pulsation nach Intro */
+.pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}

@@ -52,8 +52,8 @@
             <a
               href="#"
               class="font-montserrat font-bold inline-block text-[var(--color-Ueberschriften)] transition-transform duration-300 ease-in-out hover:scale-120 hover:text-[var(--color-Fließtext)]"
-              >Contact</a
-            >
+
+              >Contact</a>
           </nav>
           <!-- Bereich 3: Registry Button, Profil Link, Suchfeld -->
           <div class="flex justify-end items-center space-x-4">
@@ -66,7 +66,9 @@
 <div class="relative group inline-block">
   <!-- Such-Icon -->
   <button class="h-10 w-10 flex items-center justify-center text-gray-400 focus:outline-none">
-    <img src="images/Icons/Lupe.png">
+
+<img src="images/Icons/Lupe.svg">
+
   </button>
 
   <!-- Inputfeld, erscheint darunter -->
@@ -461,10 +463,20 @@
         </div>
       </div>
 
+ 
       <!-- Card 2 -->
-      <div
-        class="bg-[#ddc7bb]  rounded-xl shadow-md max-w-[380px] min-h-[530px] flex flex-col overflow-hidden
-               transform transition duration-300 hover:scale-105 hover:shadow-xl">
+<div id="card-middle" class="relative bg-[#ddc7bb] rounded-xl shadow-md max-w-[380px] min-h-[530px] flex flex-col overflow-hidden
+            transform transition duration-300 hover:scale-105 hover:shadow-xl">
+
+  <!-- Angebot -->
+  <div id="top-star" class="absolute top-6 left-3/4 transform -translate-x-1/2 hidden">
+    <div class="w-20 h-20 bg-red-500 text-white rounded-full flex items-center justify-center
+                font-bold text-sm intro-zoom">
+      Top <br> Angebot
+    </div>
+  </div>
+
+
         <img src="images/Bilder-Häuser/Haus Mitte.png" alt="Card Image" class="h-[355px] w-full object-cover">
         <div class="p-4 flex flex-col flex-1">
           <h3 class="text-[22px] flex items-center gap-2 text-lg font-semibold mb-4">
@@ -693,6 +705,7 @@
 
       <!-- ###################### End MAIN ################-->
 
+ 
       <!--- #####################  Begin FOOTER ################-->
 <footer class="col-span-3 pt-10 pb-25  bg-[#DDC7BB]">
   <div class="max-w-[1400px] mx-auto grid grid-cols-12 gap-8 text-left">
@@ -755,8 +768,35 @@
     </div>
 
   </div>
+
 </footer>
 
     <!--- #####################  End FOOTER ################-->
+
+    <div id="chat-agent" class="fixed bottom-6 right-6 flex items-center space-x-3 opacity-0 transition-opacity duration-500">
+    <!-- Sprechblase -->
+    <div id="chat-bubble" class="bg-white text-[#2B1B12] px-4 py-2 rounded-2xl shadow-md text-sm font-medium">
+      Jetzt direkt unseren Agenten sprechen
+    </div>
+    
+    <!-- Avatar -->
+    <img src="images/Bilder Menschen/Frau Brünett.png" alt="Agent Avatar"
+         class="w-14 h-14 rounded-full shadow-lg border-2 border-white cursor-pointer">
+  </div>
+
+  <!-- Pop-Up Fenster -->
+<div id="chat-popup" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden">
+  <div class="bg-white rounded-xl p-6 w-80 text-center relative">
+    <h3 class="text-lg font-semibold mb-4">Ihre Verbindung wird aufgebaut</h3>
+    
+    <!-- Ladebalken -->
+    <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+      <div id="loading-bar" class="bg-blue-500 h-4 w-0 transition-all duration-1000"></div>
+    </div>
+    
+    <!-- Schließen Button -->
+    <button id="close-popup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 font-bold">&times;</button>
+  </div>
+</div>
   </body>
 </html>
