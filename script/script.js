@@ -10,7 +10,7 @@ function animateCounter(id, target, duration) {
     if (start >= target) {
       start = target;
       clearInterval(interval);
-      celebrate(element); // Puls + Partikel beim Abschluss
+      celebrate(element); // Partikel beim Abschluss
     }
     element.textContent = Math.floor(start);
   }, 30);
